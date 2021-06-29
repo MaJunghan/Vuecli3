@@ -1,5 +1,5 @@
 import { createWebHistory, createRouter } from "vue-router";
-import NewsView from '../components/NewsView'
+import NewsView from '../components/NewsView.vue'
 import AskView from '../components/AskView.vue';
 import JobsView from '../components/JobsView.vue';
 

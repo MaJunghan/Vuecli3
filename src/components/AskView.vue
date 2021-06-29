@@ -1,5 +1,5 @@
 <template>
-  <div>ask</div>
+  <div>awqewqeqwesk</div>
 </template>
 
 <script>

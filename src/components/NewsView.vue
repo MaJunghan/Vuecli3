@@ -1,5 +1,5 @@
 <template>
-  <div>news</div>
+  <div>newweqweqwewqes</div>
 </template>
 
 <script>
