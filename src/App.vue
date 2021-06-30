@@ -1,7 +1,8 @@
 <template>
   <div id='app'>
     <ToolBar/>
-  </div>
+    <router-view></router-view>
+    </div>
 </template>
 
 <script>
@@ -17,5 +18,18 @@ export default {
 </script>
 
 <style>
-
+body {
+  margin: 0;
+}
+a {
+  color: #34495e;
+  text-decoration: none;
+}
+a:hover {
+  color: #42b883;
+  text-decoration: underline;
+}
+a.router-link-active {
+  text-decoration: underline;
+}
 </style>
