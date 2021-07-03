@@ -14,8 +14,12 @@ export default {
     }
   },
   created() {
+    console.log(`호출전 this`, this); 
     fetchNewsList()
-      .then(res => this.users = res.data)
+      .then(res => { 
+        console.log(`호출후 this`, this);
+        console.log(res);
+      }) 
       .catch(err => console(err));
   }
 }
