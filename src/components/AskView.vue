@@ -1,10 +1,23 @@
 <template>
-  <div>awqewqeqwesk</div>
+  <div v-for="(item, index) in Asks" :key="index">
+    <span> {{item.id}} </span>
+  </div>
 </template>
 
 <script>
-export default {
+import { fetchAskList } from '../api/index.js'
 
+export default {
+  data() {
+    return {
+      Asks: ''
+    }
+  },
+  created() {
+    fetchAskList()
+      .then(res => this.Asks = res.data)
+      .catch(err => console(err));
+  }
 }
 </script>
 
