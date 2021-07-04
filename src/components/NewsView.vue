@@ -1,26 +1,15 @@
 <template>
-  <div v-for="(item, index) in users" :key="index">
+  <div v-for="(item, index) in this.$store.state.news" :key="index">
     <span> {{item.id}} </span>
   </div>
 </template>
 
 <script>
-import { fetchNewsList } from '../api/index.js'
+
 
 export default {
-  data() {
-    return {
-      users: ''
-    }
-  },
   created() {
-    console.log(`호출전 this`, this); 
-    fetchNewsList()
-      .then(res => { 
-        console.log(`호출후 this`, this);
-        console.log(res);
-      }) 
-      .catch(err => console(err));
+    this.$store.dispatch('FETCH_NEWS'); // 1. dispatch로 actions를 호출.
   }
 }
 </script>
