@@ -14,6 +14,7 @@
 export default {
   created() {
     this.$store.dispatch('FETCH_NEWS'); // 1. dispatch로 actions를 호출.
+    console.log(this.$store);
   }
 }
 </script>
