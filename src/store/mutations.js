@@ -7,5 +7,11 @@ export default  { // 3. mutations에서는 state값을 변경해야하기떄문�
     },
     SET_JOB(state, data) {
         state.job = data;
-    }
+    },
+    SET_USER(state, data) {
+        state.user = data;
+    },
+    SET_ITEM(state, data) {
+        state.item = data;
+    },
 }

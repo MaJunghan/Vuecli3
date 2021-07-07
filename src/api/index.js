@@ -21,13 +21,22 @@ function fetchJobsList() {
 function fetchAskList() {
     return axios.get(`${config.baseUrl}ask/1.json`)
 }
+// user ID
+function fetchUserInfo(userName) {
+    return axios.get(`${config.baseUrl}user/${userName}.json`);
+}
+function fetchItem(itemId) {
+    return axios.get(`${config.baseUrl}item/${itemId}.json`);
+}
 
 // 3. 모듈화 내보내기
 
 export  {
     fetchNewsList,
     fetchJobsList,
-    fetchAskList
+    fetchAskList,
+    fetchUserInfo,
+    fetchItem
 } 
 
 // ==> axios를 사용하기위해서 axios를 import해야하는데 vue파일마다 게속 한다면 굉장히 프로그램적으로 안좋음
