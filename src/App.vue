@@ -1,7 +1,9 @@
 <template>
   <div id='app'>
     <ToolBar/>
-    <router-view></router-view>
+    <transition name="page">
+      <router-view></router-view>
+    </transition>
     </div>
 </template>
 
@@ -21,15 +23,10 @@ export default {
 body {
   margin: 0;
 }
-a {
-  color: #34495e;
-  text-decoration: none;
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
 }
-a:hover {
-  color: #42b883;
-  text-decoration: underline;
-}
-a.router-link-active {
-  text-decoration: underline;
+.page-enter, .page-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
