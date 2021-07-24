@@ -16,7 +16,11 @@ const store = new createStore({
         },
         fetchedItem(state) {
             return state.item;
+        },
+        fetchedNews(state) {
+            return state.news;
         }
+        
     },
     mutations: mutations,
     actions: actions,

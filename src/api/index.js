@@ -25,6 +25,7 @@ function fetchAskList() {
 function fetchUserInfo(userName) {
     return axios.get(`${config.baseUrl}user/${userName}.json`);
 }
+// item
 function fetchItem(itemId) {
     return axios.get(`${config.baseUrl}item/${itemId}.json`);
 }
