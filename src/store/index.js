@@ -19,8 +19,10 @@ const store = new createStore({
         },
         fetchedNews(state) {
             return state.news;
+        },
+        fetchedJobs(state) {
+            return state.job
         }
-        
     },
     mutations: mutations,
     actions: actions,
