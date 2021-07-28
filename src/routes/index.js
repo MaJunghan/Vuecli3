@@ -9,17 +9,17 @@ import ItemView from '@/components/ItemView'
 const routes = [
       {
         path: "/news",
-        name: "NewsView",
+        name: "news",
         component: NewsView,
       },
       {
         path: "/ask",
-        name: "AskView",
+        name: "ask",
         component: AskView,
       },
       {
           path: "/jobs",
-          name: "JobsView",
+          name: "jobs",
           component: JobsView,
       },
       {
