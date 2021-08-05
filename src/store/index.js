@@ -7,8 +7,8 @@ const store = new createStore({
         news: [], // 4.변경
         ask: [],
         job: [],
-        user: [],
-        item: [],
+        user: {},
+        item: {},
     },
     getters: {
         fetchedAsk(state) {
