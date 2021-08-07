@@ -1,20 +1,35 @@
 <template>
   <div id='app'>
     <ToolBar/>
-    <transition name="page">
-      <router-view></router-view>
-    </transition>
-    </div>
+      <transition name="page">
+        <router-view></router-view>
+      </transition>
+    <Spinner :loading="true"/>
+  </div>
 </template>
 
 <script>
 import ToolBar from './components/ToolBar.vue'
+import Spinner from './components/Spinner.vue'
 
 
 export default {
   name: 'App',
   components: {
     ToolBar,
+    Spinner,
+  },
+  data() {
+    return {
+      loadingStatus : false,  
+    };
+  },
+  methods: {
+    startSpinner() {
+      this.loadingStatus = true;
+    }
+  },
+  created() {
   }
 }
 </script>
